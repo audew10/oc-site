@@ -57,3 +57,12 @@ document.addEventListener("click", function (event) {
     ).join("");
   }
 });
+
+// 清空已選取的條件
+document.querySelector(".clear-button").addEventListener("click", () => {
+  selectedTags.clear();  // 清空選中的tag
+  document.querySelectorAll(".tag").forEach(tag => {
+    tag.classList.remove("active-tag");  // 移除已選的tag
+  });
+  document.getElementById("gallery-results").innerHTML = "<p>請選擇一個或多個 tag 查找。</p>";  // 重置顯示內容
+});

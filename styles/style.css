@@ -47,6 +47,23 @@ nav .tab.active {
   display: block;
 }
 
+/* 清空選項按鈕 */
+.clear-button {
+  background: none;
+  color: #8D8D8D;
+  border: none;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0.5em 1em;
+  font-size: 1rem;
+  margin-left: 10px;
+}
+
+.clear-button:hover {
+  color: #444;
+}
+
+
 /* 讓子選單（角色資料、世界觀）標籤置中 */
 .sub-tabs {
   display: flex;
