@@ -47,12 +47,14 @@ nav .tab.active {
   display: block;
 }
 
+/* 讓子選單（角色資料、世界觀）標籤置中 */
 .sub-tabs {
   display: flex;
   list-style: none;
   padding: 0;
   margin: 1em 0;
   gap: 1em;
+  justify-content: center;  /* 置中子標籤 */
 }
 
 .sub-tab {
@@ -80,6 +82,7 @@ nav .tab.active {
   padding: 0.4em 0.8em;
   background: #eee;
   cursor: pointer;
+  text-align: center;  /* 讓tag內文字置中 */
 }
 
 .tag.active-tag {
