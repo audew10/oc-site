@@ -1,37 +1,53 @@
+/* 載入 Noto Serif Traditional Chinese 字體 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC&display=swap');
 
-/* 繪製注意事項樣式 */
-#notes {
-  background-color: white;  /* 白色背景 */
-  color: #8D8D8D;  /* 灰色字體 */
-  border: 1px solid #8D8D8D;  /* 灰色邊框 */
+/* 設定全站字體 */
+body {
+  font-family: 'Noto Serif TC', serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* 頁面內容區 */
+main {
+  width: 75%; /* 設置頁面內容的寬度為 75% */
+  margin: 0 auto;  /* 使內容水平居中 */
+  text-align: center;  /* 文字居中顯示 */
+}
+
+/* 上排選單背景顏色 */
+nav {
+  background-color: #9E9191;  /* 更改選單底色 */
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav .tab {
   padding: 1em;
-  margin-top: 1em;
-  border-radius: 5px;
+  cursor: pointer;
+  color: white;
 }
 
-/* 其他標籤樣式 */
-.sub-tab {
-  background-color: #ddd;  /* 灰色底 */
-  color: black;  /* 黑色字 */
-  border: none;  /* 無邊框 */
-  padding: 0.5em 1em;
+nav .tab.active {
+  background: #444;
 }
 
-.sub-tab.active {
-  background: #bbb;  /* 活動中的標籤顯示深灰色 */
-}
-
-.subtab-content {
+.tab-content {
   display: none;
   padding: 1em;
-  background: #fff;
 }
 
-.subtab-content.active {
+.tab-content.active {
   display: block;
 }
 
-/* 清空選項按鈕樣式 */
+/* 清空選項按鈕 */
 .clear-button {
   background: none;
   color: #8D8D8D;
@@ -45,4 +61,58 @@
 
 .clear-button:hover {
   color: #444;
+}
+
+
+/* 繪製注意事項樣式 */
+#notes {
+  background-color: white;
+  color: #8D8D8D;  /* 灰色字體 */
+  border: 1px solid #8D8D8D;  /* 灰色邊框 */
+  padding: 1em;
+}
+
+
+/* 讓子選單（角色資料、世界觀）標籤置中 */
+.sub-tabs {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 1em 0;
+  gap: 1em;
+  justify-content: center;  /* 置中子標籤 */
+}
+
+.sub-tab {
+  cursor: pointer;
+  padding: 0.5em 1em;
+  background: #ddd;
+}
+
+.sub-tab.active {
+  background: #bbb;
+}
+
+.subtab-content {
+  display: none;
+}
+
+.subtab-content.active {
+  display: block;
+}
+
+/* tag 按鈕 */
+.tag {
+  display: inline-block;
+  margin: 0.2em;
+  padding: 0.4em 0.8em;
+  background: #eee;
+  cursor: pointer;
+  text-align: center;  /* 讓tag內文字置中 */
+}
+
+.tag.active-tag {
+  background: #444;
+  color: white;
+  border-radius: 4px;
 }

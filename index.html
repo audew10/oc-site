@@ -1,4 +1,31 @@
-
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>OC 資料站</title>
+  <link rel="stylesheet" href="styles/style.css" />
+  <script defer src="scripts/main.js"></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul class="tabs">
+        <li class="tab active" data-tab="home">首頁</li>
+        <li class="tab" data-tab="characters">角色資料</li>
+        <li class="tab" data-tab="world">世界觀</li>
+        <li class="tab" data-tab="gallery">主題藝廊</li>
+        <li class="tab" data-tab="archive">總圖庫</li>
+        <li class="tab" data-tab="notes">繪製注意事項</li>
+        <li class="tab" data-tab="ideas">靈感池</li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="home" class="tab-content active">
+      <h1>歡迎來到我的 OC 資料站</h1>
+      <p>這裡收錄角色介紹、靈感、世界觀與各類圖集。</p>
+    </section>
 <section id="characters" class="tab-content">
   <h2>角色資料</h2>
   <ul class="sub-tabs">
@@ -10,7 +37,54 @@
   <div id="char-male" class="subtab-content"><p>男角介紹與圖包...</p></div>
   <div id="char-both" class="subtab-content"><p>雙人介紹與圖包...</p></div>
 
-  <!-- 繪製注意事項區塊 -->
+  <!-- 移動後的繪製注意事項 -->
   <h2>繪製注意事項</h2>
   <p>包含禁忌、風格限制、繪師自由度等說明。</p>
 </section>
+    <section id="world" class="tab-content">
+      <h2>世界觀</h2>
+      <ul class="sub-tabs">
+        <li class="sub-tab active" data-subtab="world-original">初始世界觀</li>
+        <li class="sub-tab" data-subtab="world-paro">Paro</li>
+      </ul>
+      <div id="world-original" class="subtab-content active"><p>初始世界觀內容...</p></div>
+      <div id="world-paro" class="subtab-content"><p>Paro 世界觀內容...</p></div>
+    </section>
+    <section id="gallery" class="tab-content">
+      <h2>主題藝廊</h2>
+      <p>展示特定主題圖，如節日、特殊互動等。</p>
+    </section>
+    <section id="archive" class="tab-content">
+      <h2>總圖庫</h2>
+      <p>點選 tag 可顯示符合條件的圖片：</p>
+      <div class="tags">
+        <span class="tag" data-tag="女">#女</span>
+        <span class="tag" data-tag="男">#男</span>
+        <span class="tag" data-tag="雙人">#雙人</span>
+        <span class="tag" data-tag="正比">#正比</span>
+        <span class="tag" data-tag="Q版">#Q版</span>
+        <span class="tag" data-tag="像素">#像素</span>
+        <span class="tag" data-tag="2023">#2023</span>
+        <span class="tag" data-tag="2024">#2024</span>
+        <span class="tag" data-tag="2025">#2025</span>
+        <span class="tag" data-tag="紅色系">#紅色系</span>
+        <span class="tag" data-tag="橘黃棕色系">#橘黃棕色系</span>
+        <span class="tag" data-tag="綠色系">#綠色系</span>
+        <span class="tag" data-tag="藍色系">#藍色系</span>
+        <span class="tag" data-tag="紫色系">#紫色系</span>
+        <span class="tag" data-tag="黑白色系">#黑白色系</span>
+        <button class="clear-button">清空已選取的條件</button>
+      </div>
+      <div id="gallery-results" class="tag-gallery"></div>
+    </section>
+    <section id="notes" class="tab-content">
+      <h2>繪製注意事項</h2>
+      <p>包含禁忌、風格限制、繪師自由度等說明。</p>
+    </section>
+    <section id="ideas" class="tab-content">
+      <h2>靈感池</h2>
+      <p>構圖點子、動作 tag、情境片段...</p>
+    </section>
+  </main>
+</body>
+</html>
