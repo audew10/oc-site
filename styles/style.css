@@ -64,6 +64,15 @@ nav .tab.active {
 }
 
 
+/* 繪製注意事項樣式 */
+#notes {
+  background-color: white;
+  color: #8D8D8D;  /* 灰色字體 */
+  border: 1px solid #8D8D8D;  /* 灰色邊框 */
+  padding: 1em;
+}
+
+
 /* 讓子選單（角色資料、世界觀）標籤置中 */
 .sub-tabs {
   display: flex;
